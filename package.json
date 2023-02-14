@@ -1,0 +1,12 @@
+{
+  "name": "actitrack_server",
+  "version": "1.0.0",
+  "description": "Server side of ActiTrack application",
+  "main": "server.js",
+  "repository": "git@github.com:nevwizurai/actitrack_server.git",
+  "author": "nevwizurai",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
