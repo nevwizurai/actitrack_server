@@ -6,6 +6,8 @@ dotenv.config();
 import express, { Application, json } from "express";
 import mongoose, { ConnectOptions } from "mongoose";
 import cors from "cors";
+// Import routes
+import ActivityRoute from "./routes/activity.routes";
 
 // Server init
 const app: Application = express();
@@ -15,6 +17,8 @@ const ORIGIN: string = process.env.ORIGIN as string;
 // Server middleware
 app.use(cors({ origin: ORIGIN }));
 app.use(json());
+// Routes middleware
+app.use("/api", ActivityRoute);
 
 // Database connect then starting server
 mongoose.set("strictQuery", true);
